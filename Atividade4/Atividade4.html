@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>JO KEN PO</title>
+</head>
+<body>
+    <script>
+        var escolhaUsuario =  prompt("ESCOLHA ENTRE: PEDRA, PAPEL OU TESOURA");
+        escolhaUsuario.toUpperCase;        
+        var randomPC = Math.floor(Math.random() * 3);
+        var escolhaPC;
+        var resultado;
+
+        if(randomPC == 0){
+            escolhaPC = "PEDRA";
+        }else if(randomPC == 1){
+            escolhaPC = "TESOURA";
+        }else{
+            escolhaPC = "PAPEL";
+        }
+   
+        if(escolhaUsuario =="TESOURA"){
+            if(escolhaPC == "PEDRA"){
+                resultado = 1;
+            }else if(escolhaPC == "PAPEL"){
+                resultado = 0;
+            }else{
+                resultado = 2;
+            }                
+        }else if(escolhaUsuario == "PEDRA"){
+            if(escolhaPC == "PEDRA"){
+                resultado = 2;
+            }else if(escolhaPC == "PAPEL"){
+                resultado = 1;
+            }else{
+                resultado = 0;
+            }
+        }else if(escolhaUsuario == "PAPEL"){
+            if(escolhaPC == "PEDRA"){
+                resultado = 0;
+            }else if(escolhaPC == "PAPEL"){
+                resultado = 2;
+            }else{
+                resultado = 1;
+            }
+        }
+    
+        if(resultado == 1){
+            alert("PC VENCEU! ESCOLHA USUARIO: " + escolhaUsuario + " ESCOLHA PC: " + escolhaPC);
+        }else if(resultado == 2){
+            alert("EMPATE! ESCOLHA USUARIO: " + escolhaUsuario + " ESCOLHA PC: " + escolhaPC);
+        }else{
+            alert("USUARIO VENCEU! ESCOLHA USUARIO: " + escolhaUsuario + " ESCOLHA PC: " + escolhaPC);
+        }
+           
+
+
+    </script>
+</body>
