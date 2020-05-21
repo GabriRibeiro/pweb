@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aluno</title>
+
+    <script>
+        //1.a Maneira
+        var aluno1 ={
+            nome: "Gabriel Ribeiro",
+            ra: "0030481813054"
+        };
+
+
+        //2.a Maneira
+        function Aluno1(){
+            var nome;
+            var ra;           
+            this.setNome = function(value){
+                nome = value;
+            }
+            this.setRA = function(value){
+                ra = value;
+            }
+        }
+
+        aluno = new Aluno1();
+        aluno.setNome("Gabriel");
+        aluno.setRA("7891717981989");
+
+
+        //3.a Maneira 
+
+        var Aluno1 = function(nome, ra){
+            this.nome = nome;
+            this.ra = ra;
+        }
+
+        aluno1 = new Aluno1("Gabriel", "4890498098098");
+
+        
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
