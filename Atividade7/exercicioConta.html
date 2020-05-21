@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conta</title>
+
+    <script>
+        function Conta(){
+            var nomeCorrentista;
+            var banco;
+            var numConta;
+            var saldo;
+            this.getNomeCorrentista = function () {
+				return nomeCorrentista;
+			};
+			this.setNomeCorrentista = function (value) {
+				nomeCorrentista = value;
+			};
+            this.getBanco = function (){
+                return banco;
+            }
+            this.setBanco = function (value){
+                banco = value;
+            }
+            this.getNumConta = function (){
+                return numConta;
+            }
+            this.setNumConta = function(value){
+                numConta = value;
+            }
+            this.getSaldo = function(){
+                return saldo;
+            }
+            this.setSaldo = function(value){
+                saldo = value;
+            }
+        }
+
+        function Corrente(){
+            var saldoEspecial;
+            this.getSaldoEspecial = function(){
+                return saldoEspecial;                
+            }
+            this.setSaldoEspecial = function(value){
+                saldoEspecial = value;
+            }
+        }
+
+        function Poupanca(){
+            var juros;
+            var datVencimento;
+            this.getJuros = function(){
+                return juros;                
+            }
+            this.setJuros = function(value){
+                juros = value;
+            }
+            this.getDatVencimento = function(){
+                return datVencimento;                
+            }
+            this.setDatVencimento = function(value){
+                datVencimento = value;
+            }
+        }
+
+        Poupanca.prototype = new Conta();
+        Corrente.prototype = new Conta();
+
+        contaPoupanca = new Poupanca();
+        contaPoupanca.setBanco("Santander");
+        contaPoupanca.setDatVencimento("10/12/2020");
+        contaPoupanca.setJuros("3.5%");
+        contaPoupanca.setNumConta("489098-0");
+        contaPoupanca.setNomeCorrentista("Ronaldinho Gaúcho");
+        contaPoupanca.setSaldo("R$ 3200,00");
+        
+        alert("BANCO CONTA POUPANCA: "+ contaPoupanca.getBanco());
+        alert("DATA VENCIMENTO: " + contaPoupanca.getDatVencimento());
+        alert("Juros:" + contaPoupanca.getJuros()); 
+        alert("Numero da Conta: " + contaPoupanca.getNumConta()); 
+        alert("Nome" + contaPoupanca.getNomeCorrentista());
+        alert("Saldo" + contaPoupanca.getSaldo());
+        
+        contaCorrente = new Corrente();
+        contaCorrente.setSaldoEspecial("RS 3500,00");
+        contaCorrente.setBanco("ITAU");
+        contaCorrente.setSaldo("RS 35000,00");
+        contaCorrente.setNomeCorrentista("Joao das Neves");
+        contaCorrente.setNumConta("516508-0");
+   
+
+        alert("BANCO CONTA CORRENTE: " + contaCorrente.getBanco());
+        alert("SALDO:" + contaCorrente.getSaldo());
+        alert("NOME CORRENTISTA" + contaCorrente.getNomeCorrentista());
+        alert("SALDO ESPECIAL" + contaCorrente.getSaldoEspecial());
+        alert("NumERO CONTA" + contaCorrente.getNumConta());
+        
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

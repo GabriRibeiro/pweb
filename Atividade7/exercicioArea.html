@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Area</title>
+
+    <script>
+        function Retangulo(base, altura){
+            this.base = base;
+            this.altura = altura;
+        }
+        function calcArea(){
+            var area = this.base * this.altura;
+            return area;
+        }
+        var retangulo = new Retangulo(5, 10);
+        retangulo.calcArea = calcArea;
+        alert(retangulo.calcArea());
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
