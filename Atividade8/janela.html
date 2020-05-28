@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Abra a Janela!</title>
+</head>
+<body>
+    <img id="imge" src="janelaFechada.png" onclick="quebraJanela()" onmouseover="abreJanela()" onmouseout="fechaJanela()"> 
+
+    <script>
+        function quebraJanela(){
+            var img = document.getElementById("imge").src = "janelaQuebrada.png";
+        }
+
+        function fechaJanela (){
+            var img = document.getElementById("imge").src = "janelaFechada.png";
+        }
+
+        function abreJanela(){
+            var img = document.getElementById("imge").src ="janelaAberta.png";
+        }
+    </script>
+</body>
+</html>
