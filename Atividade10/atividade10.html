@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+    <style>
+        input[type=text], input[type=email], textarea {
+          width: 70%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+       
+        input[type=submit], input[type=reset] {
+          width: 25%;
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+        
+        #principal {
+            border-radius: 15px;
+            background-color: #f2f2f2;
+            padding-inline-end: 15%;
+            padding-inline-start: 15%;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            text-align: center;
+            margin-right: 15%;
+            margin-left: 15%;    
+        }      
+
+        .oi {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        } 
+        
+        </style>
+</head>
+<body>
+    
+    <form name="form1" id="form1" onsubmit="validaDados()">     
+        <div id="principal">
+            <p><b>FORMULÁRIO PRINCIPAL</b></p>
+            <br> 
+            <div class="oi">
+                <b>Nome Completo</b> 
+                <input name="nome" type="text" id="nome">
+            </div>
+            <div class="oi">
+                <b>E-mail</b>
+                <input name="email" type="email" id="email" >
+            </div>  
+            <div class="oi">
+                <b>Comentário</b>
+                <textarea name="mensagem" cols="50" rows="8" id="mensagem" value="" input></textarea>               
+            </div> 
+            <br>
+            <br>
+            <b>É sua primeira vez aqui?</b>
+            <br>
+            <br>
+            <div> 
+                <input type="radio" id="sim" name="sim"> Sim
+                <input type="radio" id="nao" name="nao"> Não
+            </div>
+            <br>
+            <input name="Submit" type="submit" form="form1" value="Enviar">
+            <input name="Reset" type="reset" form="form1" value="Limpar">            
+        </div>
+    </form>
+
+    <script>
+        function validaDados(){
+            if (document.forms.form1.elements["nome"].value == "" || document.forms.form1.elements.nome.value.length < 10) {
+                alert("Preencha o nome corretamente.");
+                document.forms.form1.elements["nome"].focus();    
+                return false;  
+            };
+            if (document.forms.form1.elements["email"].value == "" || document.forms.form1.elements["email"].value.indexOf('@') == -1 || document.forms.form1.elements["email"].value.indexOf('.') == -1) {
+                alert("Preencha o e-mail corretamente.");
+                document.forms.form1.elements.email.focus();
+               return false;
+            }
+            if (document.forms.form1.elements["mensagem"].value == "" || document.forms.form1.elements.mensagem.value.length < 30) {
+                alert("Preencha o comentário corretamente.");
+                
+                return false;  
+            };
+            if(document.forms.form1.elements["sim"].checked == true){
+                alert("Bem vindo!" + document.forms.form1.elements["sim"].value);
+                document.forms.form1.elements["mensagem"].focus();    
+                return false;
+            }else if(document.forms.form1.elements["sim"].checked == false && document.forms.form1.elements["nao"].checked == false){
+                alert("Insira uma opção")
+                return false;
+            }else if(document.forms.form1.elements["nao"].checked == true){
+                alert("Bem vindo de volta");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
