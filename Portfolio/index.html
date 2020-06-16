@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portofolio Gabriel Ribeiro</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+            
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>            
+            <button class="nav-toggle">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#experiencias" class="nav__link">Experiencias</a></li>
+                    <li class="nav__item"><a href="#sobre" class="nav__link">Sobre mim</a></li>
+                    <li class="nav__item"><a href="#habilidades" class="nav__link">Meus Conhecimentos</a></li>
+                    <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <section class="introducao" id="introducao">
+            <h1 class="sessao__titulo sessao__titulo--introducao">
+                Olá, me chamo <strong>Gabriel Ribeiro</strong>
+            </h1>
+            <p class="sessao__subtitulo sessao__subtitulo--introducao">Desenvolvedor back-end</p>
+            <img src="img/gabriel.jpg" class="intro__img">
+        </section>
+        
+        <section class="minhas-experiencias" id="experiencias">
+            <h2 class="sessao__titulo sessao__titulo--experiencia">Experiência</h2>
+            <div class="experiencias">
+                <div class="experiencia">
+                    <h3>Pé de Oferta</h3>
+                    <h3>2018-2018</h3>
+                    <h3>(Estágio)</h3>
+                    <p>Trabalhei como estagiário na startup, foi onde aprendi muito sobre programação web. Conheci tecnologias do front end como Javascript, Angular, HTML + CSS e também do back end, como PHP e SQL. Consegui aprender muito com meus colegas de equipe.</p>
+                </div> 
+                
+                <div class="experiencia">
+                    <h3>Prill Tecnologia</h3>
+                    <h3>2019-Atual</h3>
+                    <h3>(Estágio)</h3>
+                    <p>A Prill tecnologia é uma empresa ligada a consultoria em desenvolvimento. Estou atuando diretamente no mercado financeiro, em projetos internos da B3. Nosso desenvolvimento é apenas ligado ao back-end, onde a linguagem de programação predominante é o Java, também o SQL Oracle.</p>
+                </div>                 
+            </div> 
+            
+            <a href="#habilidades" class="btn">Minhas Habilidades</a>
+        </section>
+
+        <section class="sobre-mim" id="sobre">
+           <h2 class="sessao__titulo sessao_titulo--sobre">Quem sou eu?</h2>
+           <p class="sessao__subtitulo sessao__subtitulo--sobre">Desenvolvedor situado na região de Sorocaba/SP</p>
+           
+           <div class="sobre-mim__corpo">
+               <p>Me chamo Gabriel Ribeiro e tenho 20 anos, estou cursando o 5º semestre de Análise e Desenvolvimento de Sistemas na FATEC de Sorocaba/SP.</p>
+               <p>Desde pequeno sempre fui apaixonado por tecnologia e quando comecei o curso tinha certeza que era isso que eu queria fazer, estou começando minha carreira agora e estou aprendendo muito sobre a área.</p>
+           </div>
+           
+           <img src="img/imagem-sobre.jpg"  class="sobre-mim__img">
+        </section>
+        
+
+        <section class="minhas-habilidades" id="habilidades">
+            <h2 class="sessao__titulo sessao__titulo--habilidades">Conhecimentos</h2>            
+            <div class="portfolio">               
+                <img src="img/java.jpg" class="portfolio__img">          
+                <p>Java</p>      
+                <p>Conhecimento também em frameworks de Java como: Spring Boot, Spring MVC, Spring Security</p>          
+                
+                <img src="img/oracle.jpg" class="portfolio__img">      
+                <p>Oracle DataBase</p> 
+                <p>Conhecimentos em comandos DDL no oracle e também em criação de procedures, functions, views.</p>         
+            
+                <img src="img/PHP.jpg"  class="portfolio__img">        
+                <a>PHP</a>
+                <p>Conhecimento em Frameworks PHP, como CodeIgniter, Laravel.</p>
+            
+                <img src="img/JavaScript.jpg" class="portfolio__img">      
+                <p>JavaScript</p>
+                <p>Conhecimentos em js com frameworks e bibliotecas, angular, jQuery. Com outros elementos de Front-end como HTML5 e CSS3</p>           
+            </div>
+        </section>        
+        
+        <footer class="footer" id="contato">
+            <h2 class="sessao__titulo sessao__titulo--contato">Contato</h2>            
+            <a href="mailto:gabriel.ribeiro0404@outlook.com" class="email__link">gabriel.ribeiro0404@outlook.com</a>
+            <ul class="contato">
+                <li class="contato__item">
+                    <a class="contato__link" href="https://www.linkedin.com/in/gabriel-ribeiro404/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="contato__item">
+                    <a class="contato__link" href="https://github.com/GabriRibeiro">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
